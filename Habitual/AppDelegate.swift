@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Habitual
-//
-//  Created by Lissa on 4/25/23.
-//
-
 import UIKit
 
 @main
