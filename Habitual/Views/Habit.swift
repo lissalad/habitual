@@ -1,8 +1,8 @@
 import UIKit
 
-struct Habit {
+struct Habit: Codable {
   
-  enum Images: Int, CaseIterable {
+  enum Images: Int, CaseIterable, Codable  {
          case book
          case bulb
          case clock

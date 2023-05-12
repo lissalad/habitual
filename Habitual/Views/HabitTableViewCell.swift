@@ -10,6 +10,8 @@ import UIKit
 class HabitTableViewCell: UITableViewCell {
   
   static let identifier = "HabitCell"
+  
+  // Returning the xib file after instantiating it
   static var nib: UINib {
     return UINib(nibName: String(describing: self), bundle: nil)
   }
@@ -18,18 +20,14 @@ class HabitTableViewCell: UITableViewCell {
   @IBOutlet weak var labelHabitTitle: UILabel!
   @IBOutlet weak var labelStreaks: UILabel!
   
-  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
 
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
   
   func configure(_ habit: Habit) {
     self.imageViewIcon.image = habit.selectedImage.image
